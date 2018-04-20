@@ -1,0 +1,56 @@
+SELECT nombreDeArena FROM Arena;
+SELECT Artista FROM Evento;
+SELECT nombre FROM Artistas;
+SELECT metodoDePago, fechaDeVenta FROM Venta;
+SELECT Evento,Lugar FROM Boleto;
+
+SELECT nombreDeEvento
+From Evento
+GROUP BY fecha;
+
+SELECT nombre
+From Artistas
+GROUP BY Artista;
+
+SELECT Boleto
+FROM Boletos
+GROUP BY Evento;
+
+SELECT Zona
+From Lugar
+GROUP BY numeroDeAsiento;
+
+SELECT nombreDeEvento
+From Evento
+GROUP BY fecha;
+
+SELECT promocion
+From Pago
+GROUP BY tipo de pago
+HAVING cantidad > 1000;
+
+SELECT idVenta
+From Venta
+GROUP BY vendedor
+HAVING vendedor > 7;
+
+SELECT idPago 
+From Venta
+GROUP BY idCliente
+HAVING idPago > 1200;
+
+SELECT Nombre
+FROM Cliente
+GROUP BY Edad
+HAVING Edad > 50;
+
+SELECT Nombre
+From Cliente
+GROUP BY Edad
+HAVING Edad > 30;
+
+
+
+
+
+
