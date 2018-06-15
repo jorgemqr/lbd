@@ -1,0 +1,17 @@
+CREATE VIEW cme AS SELECT c.Nombre, c.Edad FROM [Cliente] as c WHERE Edad > 18;
+SELECT * FROM cme;
+
+CREATE VIEW ventasPorVendedor AS SELECT v.Vendedor, v.Precio FROM Venta as v ;
+SELECT * FROM ventasPorVendedor;
+
+CREATE VIEW fechasDeMayoresVentas AS SELECT COUNT fechaVenta, total GROUP BY total;
+SELECT * FROM fechasDeMayoresVentas;
+
+CREATE VIEW dineroPerdidoPorPromociones p.promocion count(p.promocion) as 'boletos de promocion' count(p.promcion)*p.promocion as 'dinero perdido por promociones'
+from[pago] as p
+group by p.promocion
+select * from dineroPerdidoPorPromociones
+where p.promocion > 0
+
+CREATE VIEW clientes mayores de edad AS SELECT Nombre, Edad FROM Cliente;
+SELECT * FROM clientes mayores de edad;
